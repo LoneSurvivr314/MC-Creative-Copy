@@ -2,21 +2,17 @@ from time import time
 import nbtlib
 from nbtlib.tag import Int, Byte, String
 import shutil
-from pathlib import Path
+from pathlib import WindowsPath
 from datetime import datetime
 
 def backup(worldFolder, backupFolder):
     # Initialize path objects
-    worldFolder = Path(worldFolder)
-    backupFolder = Path(backupFolder)
-    
+    worldFolder = WindowsPath(worldFolder)
+    backupFolder = WindowsPath(backupFolder)
     # get the current time and format it
     fTime = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
-    
-    
-    
+    # Copy the folder
     shutil.copytree(worldFolder,backupFolder/fTime)
-
 
 
 #with nbtlib.load(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World\level.dat") as file:
@@ -28,3 +24,5 @@ def backup(worldFolder, backupFolder):
 #    file2["Data"]["Player"]["playerGameType"] = Int(1)
 #    file2["Data"]["GameType"] = Int(1)
 #    file2["Data"]["allowCommands"] = Byte(1)
+
+backup(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World",r"C:\Users\TAK\Desktop\Backup\MC")
