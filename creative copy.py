@@ -4,6 +4,8 @@ import shutil
 
 def creativeCopy(worldFolder,newLocation):
     
+    
+
 
     with nbtlib.load(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World\level.dat") as file:
         file["Data"]["Player"]["playerGameType"] = Int(1)
