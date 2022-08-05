@@ -2,15 +2,16 @@ from time import time
 import nbtlib
 from nbtlib.tag import Int, Byte, String
 import shutil
-from pathlib import WindowsPath
+from pathlib import Path
 from datetime import datetime
 
 def backup(worldFolder, backupFolder):
     # Initialize path objects
-    worldFolder = WindowsPath(worldFolder)
-    backupFolder = WindowsPath(backupFolder)
+    worldFolder = Path(worldFolder)
+    backupFolder = Path(backupFolder)
     # get the current time and format it
-    fTime = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+    fTime = datetime.today().strftime("%Y-%m-%d_%H-%M-%S")
+    print(worldFolder,backupFolder/fTime)
     # Copy the folder
     shutil.copytree(worldFolder,backupFolder/fTime)
 
