@@ -6,6 +6,8 @@ from pathlib import Path
 from datetime import datetime
 
 def backup(worldFolder, backupFolder):
+    """Backs up a minecraft world to another folder. 'worldFolder' should be the folder containing the world, and 'backupfolder"""
+    
     # Initialize path objects
     worldFolder = Path(worldFolder)
     backupFolder = Path(backupFolder)
@@ -15,6 +17,7 @@ def backup(worldFolder, backupFolder):
     # Copy the folder
     shutil.copytree(worldFolder,backupFolder/fTime)
 
+def creativeCopy(worldFolder, newLocation):
 
 #with nbtlib.load(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World\level.dat") as file:
 #    file["Data"]["Player"]["playerGameType"] = Int(1)
