@@ -58,5 +58,5 @@ def creativeCopy(worldFolder, newLocation):
         file["Data"]["allowCommands"] = Byte(1)
         file["Data"]["LevelName"] = String(file["Data"]["LevelName"] + " - Creative Copy")
         
-backup(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World",r"C:\Users\TAK\OneDrive - purdue.edu\MC Backups")
+backup(r"C:\Users\TAK\AppData\Roaming\.minecraft\1.19.2\saves\Good World",r"C:\Users\TAK\OneDrive - purdue.edu\MC Backups")
 #creativeCopy(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World",r"C:\Users\TAK\AppData\Roaming\.minecraft\saves")
