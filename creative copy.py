@@ -60,3 +60,4 @@ def creativeCopy(worldFolder, newLocation):
         
 backup(r"C:\Users\TAK\AppData\Roaming\.minecraft\1.19.2\saves\Good World",r"C:\Users\TAK\OneDrive - purdue.edu\MC Backups")
 #creativeCopy(r"C:\Users\TAK\AppData\Roaming\.minecraft\saves\Good World",r"C:\Users\TAK\AppData\Roaming\.minecraft\saves")
+print("Done!")
